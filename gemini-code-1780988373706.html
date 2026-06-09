@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XALAUNCHER | Запускай Minecraft</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0a0a0c, #16212e);
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 { font-size: 3.5rem; color: #4a90e2; margin-bottom: 10px; }
+        .subtitle { opacity: 0.7; margin-bottom: 40px; }
+
+        /* Кнопка */
+        .download-btn {
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: white;
+            background: #2a5d9f;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(42, 93, 159, 0.5);
+            display: inline-block;
+        }
+        .download-btn:hover { 
+            background: #357abd; 
+            transform: scale(1.05); 
+            box-shadow: 0 0 30px rgba(42, 93, 159, 0.7);
+        }
+
+        /* Мелкий текст под кнопкой */
+        .note { font-size: 0.85rem; margin-top: 15px; opacity: 0.6; }
+
+        /* Блоки контента */
+        .container { max-width: 800px; width: 100%; margin-top: 60px; }
+        .card { background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; margin-bottom: 25px; border: 1px solid #334; }
+        h2 { color: #4a90e2; border-bottom: 2px solid #2a5d9f; display: inline-block; padding-bottom: 5px; margin-top: 0; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 12px 0; padding-left: 25px; position: relative; }
+        li::before { content: "•"; color: #4a90e2; position: absolute; left: 0; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>XALAUNCHER</h1>
+    <p class="subtitle">Твой путь в мир блоков начинается здесь</p>
+    
+    <a href="https://github.com/bagetabc/xalauncher_open/releases/tag/newupdate" class="download-btn">Скачать XALAUNCHER</a>
+    <p class="note">Релиз с GitHub: для установки необходимо скачать файл <strong>xalauncher.exe</strong></p>
+
+    <div class="container">
+        <div class="card">
+            <h2>Новшества версии 1.21+</h2>
+            <ul>
+                <li><strong>Крафтер (Crafter):</strong> Автоматизированный крафт с помощью редстоуна.</li>
+                <li><strong>Испытательные камеры:</strong> Новая структура с врагами и лутом.</li>
+                <li><strong>Бриз (Breeze):</strong> Новый моб, атакующий ветряными зарядами.</li>
+                <li><strong>Медный набор:</strong> Новые блоки, двери и люки из меди.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Системные требования</h2>
+            <p>XALAUNCHER требует стандартных ресурсов для запуска Minecraft Java Edition:</p>
+            <ul>
+                <li><strong>Процессор:</strong> Intel Core i3-3210 или AMD A8-7600 (или лучше).</li>
+                <li><strong>ОЗУ:</strong> Минимум 4 ГБ (рекомендуется 8 ГБ).</li>
+                <li><strong>Видеокарта:</strong> Intel HD Graphics 4000 или AMD Radeon R5 (или лучше).</li>
+                <li><strong>Место на диске:</strong> Минимум 2 ГБ для файлов игры.</li>
+                <li><strong>ОС:</strong> Windows 10/11 (64-bit).</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
