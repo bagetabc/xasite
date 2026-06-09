@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="verification" content="17a6c26cd2bccaaf">
-    
     <title>XALAUNCHER | Запускай Minecraft</title>
     <style>
         body {
@@ -17,37 +15,76 @@
             flex-direction: column;
             align-items: center;
         }
-        h1 { font-size: 3.5rem; color: #4a90e2; margin-bottom: 10px; }
+        h1 { font-size: 3.5rem; color: #4a90e2; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
         .subtitle { opacity: 0.7; margin-bottom: 40px; }
 
-        .download-btn {
+        /* Общие стили кнопок */
+        .btn {
             padding: 20px 50px;
             font-size: 1.3rem;
             font-weight: bold;
             color: white;
-            background: #2a5d9f;
             border-radius: 50px;
             text-decoration: none;
             transition: all 0.3s ease;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Кнопка скачивания (Синяя) */
+        .download-btn {
+            background: #2a5d9f;
             box-shadow: 0 0 20px rgba(42, 93, 159, 0.5);
         }
-        .download-btn:hover { background: #357abd; transform: scale(1.05); }
+        .download-btn:hover { 
+            background: #357abd; 
+            transform: scale(1.05); 
+            box-shadow: 0 0 30px rgba(42, 93, 159, 0.7);
+        }
 
-        .note { font-size: 0.85rem; margin-top: 15px; opacity: 0.6; }
-        .container { max-width: 800px; width: 100%; margin-top: 60px; }
+        /* Кнопка акции (Красная) */
+        .promo-btn {
+            background: #d9534f;
+            box-shadow: 0 0 20px rgba(217, 83, 79, 0.5);
+        }
+        .promo-btn:hover { 
+            background: #c9302c; 
+            transform: scale(1.05); 
+            box-shadow: 0 0 30px rgba(217, 83, 79, 0.7);
+        }
+
+        /* Мелкий текст под кнопками */
+        .note { font-size: 0.85rem; margin-top: 5px; opacity: 0.6; }
+
+        /* Контейнер для кнопок */
+        .action-area {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Блоки контента */
+        .container { max-width: 800px; width: 100%; margin-top: 20px; }
         .card { background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; margin-bottom: 25px; border: 1px solid #334; }
-        h2 { color: #4a90e2; border-bottom: 2px solid #2a5d9f; display: inline-block; padding-bottom: 5px; }
+        h2 { color: #4a90e2; border-bottom: 2px solid #2a5d9f; display: inline-block; padding-bottom: 5px; margin-top: 0; }
         ul { list-style: none; padding: 0; }
         li { margin: 12px 0; padding-left: 25px; position: relative; }
-        li::before { content: "•"; color: #4a90e2; position: absolute; left: 0; }
+        li::before { content: "•"; color: #4a90e2; position: absolute; left: 0; font-weight: bold; }
     </style>
 </head>
 <body>
     <h1>XALAUNCHER</h1>
     <p class="subtitle">Твой путь в мир блоков начинается здесь</p>
     
-    <a href="https://github.com/bagetabc/xalauncher_open/releases/tag/newupdate" class="download-btn">Скачать XALAUNCHER</a>
-    <p class="note">Релиз с GitHub: для установки необходимо скачать файл <strong>xalauncher.exe</strong></p>
+    <div class="action-area">
+        <a href="https://github.com/bagetabc/xalauncher_open/releases/tag/newupdate" class="btn download-btn">Скачать XALAUNCHER</a>
+        <p class="note">Релиз с GitHub: для установки необходим файл <strong>xalauncher.exe</strong></p>
+        
+        <div style="margin-top: 20px;"></div> <a href="https://yandex.ru/portal/defsearchpromo/landing/ru_mobile300?partner=G8FvrGl1U5keQ46802&offer_type=DLbgMOQ1TioAY31862&utm_source=promocodes_ru&utm_medium=affiliate_default&utm_campaign=300&utm_content=90920252&clid=15096001" class="btn promo-btn" target="_blank" rel="noopener noreferrer">
+            Получить 300₽ от Яндекса
+        </a>
+        <p class="note">Акция: 300 рублей на баланс вашего телефона!</p>
+    </div>
 
     <div class="container">
         <div class="card">
@@ -55,16 +92,18 @@
             <ul>
                 <li><strong>Крафтер (Crafter):</strong> Автоматизированный крафт с помощью редстоуна.</li>
                 <li><strong>Испытательные камеры:</strong> Новая структура с врагами и лутом.</li>
-                <li><strong>Бриз (Бриз):</strong> Новый моб, атакующий ветряными зарядами.</li>
+                <li><strong>Бриз (Breeze):</strong> Новый моб, атакующий ветряными зарядами.</li>
                 <li><strong>Медный набор:</strong> Новые блоки, двери и люки из меди.</li>
             </ul>
         </div>
+
         <div class="card">
             <h2>Системные требования</h2>
+            <p>Стандартные требования для запуска Minecraft Java Edition:</p>
             <ul>
-                <li><strong>Процессор:</strong> Intel Core i3-3210 или AMD A8-7600.</li>
-                <li><strong>ОЗУ:</strong> Минимум 4 ГБ.</li>
-                <li><strong>Видеокарта:</strong> Intel HD Graphics 4000 или AMD Radeon R5.</li>
+                <li><strong>Процессор:</strong> Intel Core i3-3210 / AMD A8-7600 (или лучше).</li>
+                <li><strong>ОЗУ:</strong> Минимум 4 ГБ (рекомендуется 8 ГБ).</li>
+                <li><strong>Видеокарта:</strong> Intel HD Graphics 4000 / AMD Radeon R5 (или лучше).</li>
                 <li><strong>Место на диске:</strong> Минимум 2 ГБ.</li>
                 <li><strong>ОС:</strong> Windows 10/11 (64-bit).</li>
             </ul>
